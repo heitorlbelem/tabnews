@@ -7,7 +7,7 @@ async function query(queryObject) {
     database: process.env.POSTGRES_DB,
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: getSSLValues()
+    ssl: getSSLValues(),
   });
   try {
     await client.connect();
@@ -15,9 +15,9 @@ async function query(queryObject) {
     return result;
   } catch (error) {
     console.error(error);
-    throw error
+    throw error;
   } finally {
-    await client.end()
+    await client.end();
   }
 }
 
@@ -26,7 +26,7 @@ export default {
 };
 
 function getSSLValues() {
-  if (process.env.NODE_ENV === 'development') return false
-  if (process.env.POSTGRES_CA) return { ca: process.env.POSTGRES_CA }
-  return true
+  if (process.env.NODE_ENV !== "production") return false;
+  if (process.env.POSTGRES_CA) return { ca: process.env.POSTGRES_CA };
+  return true;
 }
