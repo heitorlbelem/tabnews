@@ -12,7 +12,7 @@ module.exports = defineConfig([
     extends: ["js/recommended"],
     rules: {
       "no-unused-vars": "warn",
-      "no-undef": "warn",
+      "no-undef": "error",
     },
     languageOptions: {
       parserOptions: {
