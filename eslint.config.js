@@ -1,8 +1,8 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import js from "@eslint/js";
-import globals from "globals";
+const { defineConfig, globalIgnores } = require("eslint/config");
+const js = require("@eslint/js");
+const globals = require("globals");
 
-export default defineConfig([
+module.exports = defineConfig([
   globalIgnores(["node_modules/**", ".next/**"]),
   {
     files: ["**/*.js"],
