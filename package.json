@@ -4,7 +4,7 @@
   "description": "Projeto clone do tabnews.com.br",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run services:up && npm run wait-for-postgres && npm run migration:up && next dev",
+    "dev": "npm run services:up && npm run wait-for-postgres && npm run migrations:up && next dev",
     "test": "npm run services:up && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "test:watch": "jest --watchAll --runInBand",
     "services:up": "docker compose -f infra/compose.yaml up -d",
@@ -14,8 +14,8 @@
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "next lint --dir .",
-    "migration:create": "node-pg-migrate -m infra/migrations create",
-    "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
+    "migrations:create": "node-pg-migrate -m infra/migrations create",
+    "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "prepare": "husky",
     "commit": "cz"
   },
