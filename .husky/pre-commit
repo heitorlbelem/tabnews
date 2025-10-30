@@ -2,6 +2,6 @@ if npm run leak:scan >/dev/null 2>&1; then
   echo "✅ Secret scan passed."
   exit 0
 else
-  echo "Secret scan failed. Please remove any secrets before committing."
+  echo "❌ Secret scan failed. Please remove any secrets before committing."
   exit 1
 fi

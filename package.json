@@ -19,7 +19,7 @@
     "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "prepare": "husky",
     "commit": "cz",
-    "leak:scan": "gitleaks-secret-scanner --diff-mode all"
+    "leak:scan": "gitleaks-secret-scanner --diff-mode staged"
   },
   "author": "",
   "license": "MIT",
