@@ -1,0 +1,26 @@
+{
+  "name": "tabnews",
+  "version": "1.0.0",
+  "description": "Clone do tabnews (Estudos)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heitorlbelem/tabnews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heitorlbelem/tabnews/issues"
+  },
+  "homepage": "https://github.com/heitorlbelem/tabnews#readme",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
